@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>JspServlet</display-name>
+	<!-- web.xml파일 : 웹 어플리케이션을 위한 설정 정보를 담고 있음(선택..) 내용 변경 후 tomcat 재기동을 하면 
+		반영됨 -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 초기화 파라미터 -->
+
+	<context-param>
+		<description>로깅여부</description>
+		<param-name>logEnabled</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<context-param>
+		<description>디버깅 레벨</description>
+		<param-name>debugLevel</param-name>
+		<param-value>5</param-value>
+	</context-param>
+
+	<!-- 
+	404,500 : 음답 상태 코드
+	location : 오류 화면을 출력할 jsp 페이지
+	 -->
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/chap06/error/error404.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/chap06/error/error500.jsp</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/chap06/error/errorNullPointer.jsp</location>
+	</error-page>
+	
+</web-app>
