@@ -48,4 +48,16 @@
 		<location>/chap06/error/errorNullPointer.jsp</location>
 	</error-page>
 	
+	<!-- 
+	세션 유효 시간 설정 (분) => 세션 타임아웃 시간을 30분으로 설정
+	0이나 음수로 지정하면 세련은 유효 시간 없다는 것임 . session.invalidate() 호출 전 까지
+	세션 객체가 서버의 메모리에 계속 남게됨. 그리하여 메모리 부족 현상이 발생됨.
+	반드시 세션 타임아웃 시간을 지정해주어야 함!!
+	-->
+	
+	<session-config>
+		<session-timeout>30</session-timeout>
+		<!-- 0 또는 음수 일때 타임아웃이 없어짐(무한) -->
+	</session-config>
+	
 </web-app>

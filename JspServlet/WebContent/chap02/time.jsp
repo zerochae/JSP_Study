@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+ 
 <!-- 
 웹과 관련된 코드는 webapps 폴더의 하위 폴더에 위치시켜야 함.
 파일을  UTF-8 인코딩으로 저장해야 함
