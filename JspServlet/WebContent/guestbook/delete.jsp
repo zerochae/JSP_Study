@@ -51,10 +51,11 @@
 	%>
 	<a href="list.jsp">[목록보기]</a>
 	<script type="text/javascript">
-		
-			window.setInterval( ()=> {
-			location.href="/guestbook/list.jsp"
-			});
-		</script>
+		function home() {
+			location.href = "/guestbook/list.jsp";
+		};
+
+		setTimeout(home, 3000);
+	</script>
 </body>
 </html>
