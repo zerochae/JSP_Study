@@ -1,13 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
-<style>
-
-h1,h2,h3,h4,p,span{
-	transform : rotate(0.04deg)
+ <style> 
+ h1,h2,h3,h4,p,span,strong{
+ 	transform : rotate(0.04deg)
 }
-
-</style>
-
+ </style>
 <%
 request.setCharacterEncoding("UTF-8");
 %>
